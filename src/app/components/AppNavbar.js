@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
 import AuthenticationService from '../services/AuthenticationService';
+//import SchoolIcon from '../assets/icons/school';
+//import LogoIcon from '../assets/icons/logo';
 
 class AppNavbar extends Component {
   constructor(props) {
@@ -23,11 +25,11 @@ class AppNavbar extends Component {
 
   componentDidMount() {
     const user = AuthenticationService.getCurrentUser();
-
+    console.log("USER ",user)
     if (user) {
       const roles = [];
 
-      user.authorities.forEach(authority => {
+      user&&user.authorities&&user.authorities.forEach(authority => {
         roles.push(authority.authority)
       });
   
@@ -43,7 +45,7 @@ class AppNavbar extends Component {
 
   signOut = () => {
     AuthenticationService.signOut();
-    this.props.history.push('/home');
+    this.props.history.push('/bader');
     window.location.reload();
   }
 
@@ -54,11 +56,20 @@ class AppNavbar extends Component {
   }
 
   render() {
-    return <Navbar color="dark" dark expand="md">
-      <NavbarBrand tag={Link} to="/home">Loizenai.com</NavbarBrand>
-      <Nav className="mr-auto">
-        <NavLink href="/home">Home</NavLink>
-        {this.state.showUser && <NavLink href="/user">User</NavLink>}
+    return <Navbar className="nav-color" expand="md" >
+      {/* <NavbarBrand tag={Link} to="/bader">
+        <LogoIcon style={{color: "#fff" }} />Loizenai.com</NavbarBrand> */}
+      <Nav className="mr-auto" >
+          
+        <NavLink href="/bader" style={{color: "#fff" }}> 
+        Bader
+         {/* <SchoolIcon style={{color: "#fff" }} /> */}
+           </NavLink>
+           <NavLink href="/badercreate" style={{color: "#fff" }}> 
+        BaderCreate
+         {/* <SchoolIcon style={{color: "#fff" }} /> */}
+           </NavLink>
+        {this.state.showUser && <NavLink href="/user" style={{color: "#fff" }}>User</NavLink>}
         {this.state.showPM && <NavLink href="/pm">PM</NavLink>}
         {this.state.showAdmin && <NavLink href="/admin">Admin</NavLink>}
       </Nav>

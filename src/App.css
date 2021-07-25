@@ -1,3 +1,24 @@
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+.logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -10,8 +31,9 @@
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	width: 1em;
+	height: 1em;
+  	pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -21,8 +43,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #001529;
+  min-height: 120vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,8 +53,11 @@
   color: white;
 }
 
+.nav-color {
+  background-color:rgb(2, 17, 59);
+}
 .App-link {
-  color: #61dafb;
+  color:white;
 }
 
 @keyframes App-logo-spin {
@@ -42,4 +67,158 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.header-menu.horizontal {
+	flex: 1;
+	margin: 0 16px;
+	background: none;
+	border-bottom: none;
+	line-height: normal;
+}
+
+.school-logo-horizontal {
+	height: 60px;
+	display: flex;
+	align-items: center;
+}
+
+.school-logo-horizontal img {
+	height: 50px;
+	width: 50px;
+	object-fit: cover;
+}
+
+.header-menu.horizontal.ant-dropdown-menu-dark {
+	background: #001529 !important;
+}
+
+.header-menu.horizontal.ant-dropdown-menu-dark li.ant-dropdown-menu-item {
+	display: flex;
+	align-items: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.header-menu.horizontal.ant-dropdown-menu-dark svg {
+	width: 18px;
+	height: 18px;
+}
+
+.header-menu.horizontal .ant-menu-item {
+	min-width: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 5px;
+	color: #fff;
+	border-bottom: none;
+	margin-right: 5px;
+	padding: 10px;
+}
+
+.header-menu.horizontal .ant-menu-item:hover,
+.header-menu.horizontal .ant-menu-item.ant-menu-item-selected {
+	background-image: linear-gradient(to left, #617cff 2%, #2948d6 100%);
+	color: #fff !important;
+	border-bottom: none;
+}
+
+.header-menu.horizontal .ant-menu-item > span:first-child {
+	vertical-align: middle;
+}
+
+.header-menu.horizontal .ant-menu-item > span:nth-child(2) {
+	vertical-align: middle;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.header-menu.verticle {
+	padding: 0 15px;
+	background: none;
+	border-right: 1px solid transparent;
+}
+
+.school-logo-vertical {
+	width: 138px;
+	height: auto;
+	object-fit: cover;
+}
+
+.school-logo-vertical-box {
+	width: 138px;
+	height: 138px;
+}
+
+.header-menu.verticle .ant-menu-item {
+	color: #fff;
+	border-bottom: none;
+	background-color: transparent !important;
+	border-radius: 5px;
+	min-height: 49px;
+	line-height: 44px;
+	vertical-align: middle;
+}
+
+.header-menu.verticle .ant-menu-item:hover,
+.header-menu.verticle .ant-menu-item.ant-menu-item-selected {
+	background-image: linear-gradient(to left, #617cff 2%, #2948d6 100%);
+	background-color: transparent !important;
+	color: #fff !important;
+	border-bottom: none;
+	border-right: none;
+}
+
+.header-menu.verticle .ant-menu-item:hover:after,
+.header-menu.verticle .ant-menu-item.ant-menu-item-selected:after {
+	content: none;
+}
+
+.header-menu.verticle .ant-menu-item > span:first-child {
+	vertical-align: middle;
+}
+
+.header-menu.verticle .ant-menu-item > span:first-child svg {
+	width: 20px;
+	height: auto;
+	vertical-align: middle;
+}
+
+.header-menu.verticle .ant-menu-item > span:nth-child(2) {
+	vertical-align: middle;
+	font-size: 16px;
+	font-weight: 600;
+	color: #ffffff;
+	padding-left: 10px;
+}
+
+.custom-select-header {
+	width: 130px;
+	/* margin-right: 0 !important; */
+	border-radius: 3px;
+	font-size: 14px;
+	color: #000000;
+	height: 37px;
+}
+
+.custom-select-header .ant-select-selector {
+	height: 37px !important;
+}
+
+.custom-select-header .ant-select-selector .ant-select-selection-item {
+	line-height: 35px !important;
+}
+
+.custom-select-header .ant-select-arrow {
+	top: 55%;
+}
+
+.custom-select-header .custom-select-option {
+	font-size: 14px;
+	color: #000000;
+}
+
+.hightlighted-role {
+	color: #3a57e2;
 }
