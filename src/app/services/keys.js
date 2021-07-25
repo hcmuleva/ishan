@@ -1,6 +1,6 @@
 const aws={
-    accessKeyId:"AKIAV7NXCLGXUYJOIFOF",
-	secretAccessKey:"qaiGW3hCkbBBteWuZsmSGynEciFbk0UKUPTROTED",
+    accessKeyId:"DUMMY",
+	secretAccessKey:"DUMM",
 	region:"ap-southeast-1",
 	dirName:"seervi",
 	bucketName:"samaj"
