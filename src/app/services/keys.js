@@ -1,9 +1,9 @@
 const aws={
     accessKeyId:"DUMMY",
 	secretAccessKey:"DUMM",
-	region:"ap-southeast-1",
-	dirName:"seervi",
-	bucketName:"samaj"
+	region:"DUMMY",
+	dirName:"DUMMY",
+	bucketName:"DUMMY"
 }
 
 export default aws;
